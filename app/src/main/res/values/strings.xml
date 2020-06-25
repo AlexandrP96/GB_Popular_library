@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GB_Popular_L</string>
+    <string name="BtnMVP">MVP</string>
+    <string name="BtnMoxy">MVP_Moxy</string>
+    <string name="Default" />
+    <string name="BtnAppend">Append</string>
+</resources>
