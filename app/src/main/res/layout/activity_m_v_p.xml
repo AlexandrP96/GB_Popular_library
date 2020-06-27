@@ -5,7 +5,7 @@
     android:id="@+id/MVPLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MVP.MVPActivity">
+    tools:context=".MVP.mvview.MVPActivity">
 
     <EditText
         android:id="@+id/EditText"
@@ -26,6 +26,7 @@
         android:id="@+id/BtnAppend"
         android:layout_width="310dp"
         android:layout_height="62dp"
+        android:onClick="onClick"
         android:text="@string/BtnAppend"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,14 +37,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="310dp"
-        android:layout_height="377dp"
+        android:layout_width="300dp"
+        android:layout_height="254dp"
         android:text="@string/Default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.704" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
