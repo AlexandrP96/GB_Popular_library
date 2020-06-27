@@ -35,4 +35,10 @@ public class MVPActivity extends AppCompatActivity implements mvpView {
     public void AppendText(String word) {
         textView.append(word);
     }
+
+    @Override
+    public String GetEditText(String eWord) {
+        eWord = String.valueOf(editText.getText());
+        return eWord;
+    }
 }

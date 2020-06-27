@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import ru.alexbox.gb_popular_l.MVP.mvview.MVPActivity;
+import ru.alexbox.gb_popular_l.moxymvp.moview.MoxyActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         ButtonMoxy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentMO = new Intent(getApplicationContext(), MoxyActivity.class);
+                startActivity(intentMO);
             }
         });
     }

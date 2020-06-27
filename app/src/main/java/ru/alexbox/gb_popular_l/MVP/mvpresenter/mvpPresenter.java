@@ -14,9 +14,14 @@ public class mvpPresenter {
     }
 
     public void onButtonClick() {
-//        String wordS = MVPModel.getWord();
-        String word = "test";
-        MVPModel.setWord(word);
-        MVPView.AppendText(word);
+        String word = "";
+        String eWord = MVPView.GetEditText(word);
+
+        if (MVPModel != null) {
+
+            MVPModel.setWord(eWord);
+            MVPView.AppendText(eWord);
+        }
+
     }
 }
