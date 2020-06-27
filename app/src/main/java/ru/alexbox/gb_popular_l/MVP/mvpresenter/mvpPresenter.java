@@ -18,7 +18,6 @@ public class mvpPresenter {
         String eWord = MVPView.GetEditText(word);
 
         if (MVPModel != null) {
-
             MVPModel.setWord(eWord);
             MVPView.AppendText(eWord);
         }

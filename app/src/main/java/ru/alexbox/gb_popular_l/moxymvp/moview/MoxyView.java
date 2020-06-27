@@ -8,4 +8,6 @@ public interface MoxyView extends MvpView {
 
     @StateStrategyType(value = AddToEndStrategy.class)
     void AppendText(String word);
+
+
 }

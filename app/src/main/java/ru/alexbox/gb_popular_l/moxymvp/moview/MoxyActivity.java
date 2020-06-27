@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import moxy.presenter.InjectPresenter;
@@ -13,6 +14,7 @@ import ru.alexbox.gb_popular_l.R;
 public class MoxyActivity extends AppCompatActivity implements MoxyView {
 
     private TextView textView;
+    private EditText editText;
 
     @InjectPresenter
     MoxyPresenter moxy;
@@ -23,6 +25,7 @@ public class MoxyActivity extends AppCompatActivity implements MoxyView {
         setContentView(R.layout.activity_moxy);
 
         textView = findViewById(R.id.textView);
+        editText = findViewById(R.id.EditText);
     }
 
     public void onClick(View v) {
