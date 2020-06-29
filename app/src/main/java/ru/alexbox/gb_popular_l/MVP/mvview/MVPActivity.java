@@ -16,6 +16,8 @@ public class MVPActivity extends AppCompatActivity implements mvpView {
     private TextView textView;
     private mvpPresenter mvp;
 
+    // Прикол
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
