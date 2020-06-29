@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">GB_Popular_L</string>
-    <string name="BtnMVP">MVP</string>
-    <string name="BtnMoxy">MVP_Moxy</string>
     <string name="Default" />
-    <string name="BtnAppend">Append</string>
+    <string name="btn_task1">Task 1</string>
+    <string name="btn_task2">Task 2</string>
+    <string name="btn_task3">Task 3</string>
+    <string name="btnSubscribe">Subscribe</string>
+    <string name="btnUnsubscribe">Unsubscribe</string>
+    <string name="btnSpam">Spam</string>
+    <string name="btnAsynch">AsyncTask</string>
 </resources>
