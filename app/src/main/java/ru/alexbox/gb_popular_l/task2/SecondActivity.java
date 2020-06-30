@@ -14,6 +14,9 @@ public class SecondActivity extends AppCompatActivity {
     private Button unSubscribe;
     private Button spam;
 
+    private Task2Logic logic = new Task2Logic();
+    private Spam spamO = new Spam();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,21 +35,21 @@ public class SecondActivity extends AppCompatActivity {
         subscribe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                logic.subscribeOb(spamO);
             }
         });
 
         unSubscribe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                logic.unSubscribeOb(spamO);
             }
         });
 
         spam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                logic.initSpam("1");
             }
         });
     }
