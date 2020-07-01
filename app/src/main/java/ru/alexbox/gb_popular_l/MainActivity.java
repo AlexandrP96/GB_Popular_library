@@ -13,6 +13,8 @@ import ru.alexbox.gb_popular_l.task3.ThirdActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Lesson 3
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
