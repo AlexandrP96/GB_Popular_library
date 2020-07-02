@@ -8,7 +8,8 @@ public class MoxyModel {
         return word;
     }
 
-    public void setWord(String word) {
+    public String setWord(String word) {
         this.word = word;
+        return word;
     }
 }

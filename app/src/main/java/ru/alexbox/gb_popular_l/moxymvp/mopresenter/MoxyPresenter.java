@@ -10,8 +10,8 @@ public class MoxyPresenter extends MvpPresenter<MoxyView> {
 
     private MoxyModel moxy;
 
-    public MoxyPresenter(MoxyModel moxy) {
-        this.moxy = moxy;
+    public MoxyPresenter() {
+        this.moxy = new MoxyModel();
     }
 
     @Override
@@ -20,8 +20,11 @@ public class MoxyPresenter extends MvpPresenter<MoxyView> {
     }
 
     public void onButtonClick() {
-        String word = "test word";
-        moxy.setWord(word);
-        getViewState().AppendText(word);
+        String word = "Сольнце";
+
+        if (moxy != null) {
+            moxy.setWord(word);
+            getViewState().AppendText(word);
+        }
     }
 }
