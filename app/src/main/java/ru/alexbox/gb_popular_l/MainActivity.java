@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import ru.alexbox.gb_popular_l.MVP.mvview.MVPActivity;
-import ru.alexbox.gb_popular_l.moxymvp.moview.MoxyActivity;
+import ru.alexbox.gb_popular_l.task1.FirstActivity;
+import ru.alexbox.gb_popular_l.task2.SecondActivity;
+import ru.alexbox.gb_popular_l.task3.ThirdActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,23 +22,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Buttons() {
-        Button ButtonMVP = findViewById(R.id.BtnMVP);
-        Button ButtonMoxy = findViewById(R.id.BtnMoxy);
+        Button task1 = findViewById(R.id.BtnOne);
+        Button task2 = findViewById(R.id.BtnTwo);
+        Button task3 = findViewById(R.id.BtnThree);
 
-        ButtonMVP.setOnClickListener(new View.OnClickListener() {
+
+        task1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentMV = new Intent(getApplicationContext(), MVPActivity.class);
-                startActivity(intentMV);
+                Intent first = new Intent(getApplicationContext(), FirstActivity.class);
+                startActivity(first);
             }
         });
 
-        ButtonMoxy.setOnClickListener(new View.OnClickListener() {
+        task2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentMO = new Intent(getApplicationContext(), MoxyActivity.class);
-                startActivity(intentMO);
+                Intent second = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(second);
             }
         });
+
+        task3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent third = new Intent(getApplicationContext(), ThirdActivity.class);
+                startActivity(third);
+            }
+        });
+
     }
 }
