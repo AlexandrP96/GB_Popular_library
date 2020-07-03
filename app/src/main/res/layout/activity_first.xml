@@ -7,13 +7,28 @@
     tools:context=".task1.FirstActivity">
 
     <Button
-        android:id="@+id/btnAsynch"
+        android:id="@+id/btnRxSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnAsynch"
+        android:onClick="onRxClick"
+        android:text="@string/btnSubscribe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.361" />
+
+    <Button
+        android:id="@+id/btnUnRx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRxUnClick"
+        android:text="@string/btnUnsubscribe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,65 +2,49 @@ package ru.alexbox.gb_popular_l.task1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
-import java.util.concurrent.TimeUnit;
-
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import ru.alexbox.gb_popular_l.R;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private static final String TAG = "FirstActivity";
-    private Button button;
+    private static final String TAG = "Task 1";
+
+    private Observable<String> observable;
+    private Disposable disposable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        button = findViewById(R.id.btnAsynch);
-        onButton();
+        Presenter presenter = new Presenter();
+        observable = presenter.getMessage();
+
+        ButterKnife.bind(this);
     }
 
-    private void onButton() {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initAsync();
-            }
-        });
+    @OnClick(R.id.btnRxSub)
+    public void onRxClick(View view) {
+        Task1Logic();
     }
 
-    private void initAsync() {
-        MyAsyncTask asyncTask = new MyAsyncTask();
-        asyncTask.execute();
-        Log.d(TAG, "AsyncTask started in Thread : " + Thread.currentThread().getName());
+    @OnClick(R.id.btnUnRx)
+    public void onRxUnClick(View view) {
+        disposable.dispose();
     }
 
-    private static class MyAsyncTask extends AsyncTask<Void, Void, Void> {
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-
-            for (int i = 0; i < 5; i++) {
-                try {
-                    TimeUnit.SECONDS.sleep(1);
-                    Log.d(TAG, " " + Thread.currentThread().getName() + i);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            Log.d(TAG, "AsyncTask finished in Thread : " + Thread.currentThread().getName());
-        }
+    public void Task1Logic() {
+        disposable = observable.observeOn(AndroidSchedulers.mainThread()).subscribe(string ->
+                Log.d(TAG, "Task 1/ Next in " + Thread.currentThread().getName()), throwable ->
+                Log.e(TAG, "Task 1/ Error "), () ->
+                Log.d(TAG, "Task 1/ Completed in " + Thread.currentThread().getName()));
     }
 }

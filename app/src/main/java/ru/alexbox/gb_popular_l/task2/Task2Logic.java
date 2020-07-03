@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
+
 public class Task2Logic implements ObsFunc {
 
     private static final String TAG = "Task 2/ ";
@@ -20,7 +21,6 @@ public class Task2Logic implements ObsFunc {
 
         spamOb();
     }
-
 
     @Override
     public void subscribeOb(Observer observer) {
