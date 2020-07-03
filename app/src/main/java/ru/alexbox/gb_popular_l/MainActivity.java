@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         task1.setOnClickListener(v -> {
-            Intent third = new Intent(getApplicationContext(), FirstActivity.class);
-            startActivity(third);
+            Intent first = new Intent(getApplicationContext(), FirstActivity.class);
+            startActivity(first);
         });
 
         task2.setOnClickListener(v -> {
