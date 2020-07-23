@@ -4,31 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".task1.FirstActivity">
+    tools:context=".task_2.RetroActivity">
 
     <Button
-        android:id="@+id/btnRxSub"
+        android:id="@+id/btnRetrofit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onRxClick"
-        android:text="@string/btnSubscribe"
+        android:text="@string/Retrofit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.856" />
 
-    <Button
-        android:id="@+id/btnUnRx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onRxUnClick"
-        android:text="@string/btnUnsubscribe"
+    <ImageView
+        android:id="@+id/retroView"
+        android:layout_width="319dp"
+        android:layout_height="390dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.237"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>
