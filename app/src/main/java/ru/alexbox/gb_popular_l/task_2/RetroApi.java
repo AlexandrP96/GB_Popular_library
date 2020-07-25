@@ -8,11 +8,10 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.alexbox.gb_popular_l.task_1.GsonData;
 
 public class RetroApi {
 
-    public Observable<GsonData> requestServer() {
+    public Observable<User> requestServer() {
 
         Gson gson = new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()

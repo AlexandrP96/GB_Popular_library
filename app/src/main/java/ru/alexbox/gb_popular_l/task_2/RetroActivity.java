@@ -14,7 +14,6 @@ public class RetroActivity extends AppCompatActivity {
 
     private Button retroButton;
     private ImageView retroView;
-
     private RetroPresenter presenter;
 
     @Override
@@ -22,19 +21,22 @@ public class RetroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retro);
 
-        retroButton = findViewById(R.id.btnRetrofit);
-        retroView = findViewById(R.id.retroView);
-
         presenter = new RetroPresenter();
-
+        initView();
         initTask();
     }
 
+    private void initView() {
+        retroButton = findViewById(R.id.btnRetrofit);
+        retroView = findViewById(R.id.retroView);
+    }
+
     private void initTask() {
-        presenter.getString();
+        String result = presenter.getResult();
         retroButton.setOnClickListener(v -> Glide
                 .with(this)
-                .load("https://avatars0.githubusercontent.com/u/66577?v=4")
+                // "https://avatars0.githubusercontent.com/u/66577?v=4"
+                .load(result)
                 .into(retroView));
     }
 }

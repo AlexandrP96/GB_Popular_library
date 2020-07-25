@@ -11,9 +11,4 @@ public class GsonData {
     @Expose
     @SerializedName("year")
     public String year;
-
-    @Expose
-    @SerializedName("avatar_url")
-    public String avatar_url;
-
 }
