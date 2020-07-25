@@ -5,6 +5,7 @@ import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import ru.alexbox.gb_popular_l.task_1.GsonData;
 
 public class RetroPresenter {
 
@@ -17,10 +18,10 @@ public class RetroPresenter {
     }
 
     public void getString() {
-        Observable<String> single = retroApi.requestServer();
+        Observable<GsonData> single = retroApi.requestServer();
 
-        Disposable disposable = single.observeOn(AndroidSchedulers.mainThread()).subscribe(str -> {
-            Log.d(TAG, "onNext: " + str);
+        Disposable disposable = single.observeOn(AndroidSchedulers.mainThread()).subscribe(user -> {
+            Log.d(TAG, "Task_2_Avatar: " + user.avatar_url);
         }, throwable -> {
             Log.e(TAG, "onError");
         });

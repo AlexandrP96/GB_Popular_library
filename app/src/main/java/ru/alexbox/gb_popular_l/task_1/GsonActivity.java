@@ -26,6 +26,7 @@ public class GsonActivity extends AppCompatActivity {
         String json = "{\n" +
                 "  \"time_of_year\": \"summer\",\n" +
                 "  \"year\": 2019,\n" +
+                "  \"avatar_url\": \"https://avatars0.githubusercontent.com/u/66577?v=4\",\n" +
                 "  \"test_line\": \"useless\"\n" +
                 "}";
 
