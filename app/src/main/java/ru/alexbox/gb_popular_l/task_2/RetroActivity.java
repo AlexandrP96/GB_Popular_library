@@ -32,10 +32,11 @@ public class RetroActivity extends AppCompatActivity {
     }
 
     private void initTask() {
-        String result = presenter.getResult();
+        presenter.getResult();
+        String result = presenter.getAnswer();
+
         retroButton.setOnClickListener(v -> Glide
                 .with(this)
-                // "https://avatars0.githubusercontent.com/u/66577?v=4"
                 .load(result)
                 .into(retroView));
     }
