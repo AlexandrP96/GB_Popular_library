@@ -35,4 +35,8 @@ public class RetroPresenter {
     public String getAnswer() {
         return result;
     }
+
+    private void emptyMethod() {
+
+    }
 }
