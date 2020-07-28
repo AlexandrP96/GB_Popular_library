@@ -14,9 +14,10 @@ public class RoomPresenter {
 
     private UserDao dao;
 
-//    public RoomPresenter() {
-//        dao = App.getBase().userDao();
-//    }
+    public RoomPresenter() {
+        dao = App.getBase().userDao();
+    }
+
 
     public void putUser() {
         User user = new User();

@@ -12,7 +12,7 @@ import io.reactivex.Single;
 @Dao
 public interface UserDao {
 
-    @Query("SElECT * FROM Users")
+    @Query("SElECT * FROM table_users")
     Single<List<User>> getAll();
 
     @Insert

@@ -3,7 +3,7 @@ package ru.alexbox.gb_popular_l.lesson_5;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Users")
+@Entity(tableName = "table_users")
 public class User {
 
     @PrimaryKey(autoGenerate = true)

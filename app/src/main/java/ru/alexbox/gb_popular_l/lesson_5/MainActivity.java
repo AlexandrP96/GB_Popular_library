@@ -1,4 +1,4 @@
-package ru.alexbox.gb_popular_l;
+package ru.alexbox.gb_popular_l.lesson_5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import ru.alexbox.gb_popular_l.lesson_5.RoomPresenter;
+import ru.alexbox.gb_popular_l.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
-
         presenter = new RoomPresenter();
     }
 
