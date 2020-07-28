@@ -1,11 +1,10 @@
-package ru.alexbox.gb_popular_l.task3;
+package ru.alexbox.gb_popular_l.task1;
 
 import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.schedulers.Schedulers;
 
@@ -15,20 +14,21 @@ public class Presenter {
 
     public Observable<String> getMessage() {
 
-        return Observable.create(new ObservableOnSubscribe<String>() {
-            @Override
-            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+        return Observable.create((ObservableOnSubscribe<String>) emitter -> {
 
+            try {
                 for (int i = 0; i < 10; i++) {
                     TimeUnit.SECONDS.sleep(1);
                     String message = " message - " + i;
                     Log.d(TAG, "This is - " + Thread.currentThread().getName() + message);
                     emitter.onNext(message);
                 }
-
-                emitter.onError(new NullPointerException());
                 emitter.onComplete();
+            } catch (InterruptedException e) {
+                Log.d(TAG, "Error at task 1!");
             }
+
+
         }).subscribeOn(Schedulers.io());
     }
 }

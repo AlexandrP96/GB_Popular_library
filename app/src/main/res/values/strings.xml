@@ -8,4 +8,5 @@
     <string name="btnUnsubscribe">Unsubscribe</string>
     <string name="btnSpam">Spam</string>
     <string name="btnAsynch">AsyncTask</string>
+    <string name="Single">Single</string>
 </resources>
