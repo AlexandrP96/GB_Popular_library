@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import ru.alexbox.gb_popular_l.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainView {
 
     private RoomPresenter presenter;
     TextView textView;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
-        presenter = new RoomPresenter();
+        presenter = new RoomPresenter(this);
     }
 
     public void AppUser(View view) {
@@ -38,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void GetUsers(View view) {
         presenter.getUsers();
+    }
+
+    @Override
+    public void setText(String text) {
+        textView.append(text + "\n");
     }
 }
