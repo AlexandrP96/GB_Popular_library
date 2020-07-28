@@ -26,34 +26,26 @@ public class RoomPresenter {
         user.age = 30;
 
         Disposable disposable = dao.addU(user).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(id -> {
-                    Log.d(TAG, "add User: " + id);
-                }, throwable -> {
-                    Log.d(TAG, "Lesson 5: " + throwable);
-                });
+                .subscribe(id -> Log.d(TAG, "add User: " + id), throwable -> Log.d(TAG, "Lesson 5: " + throwable));
     }
 
     public void deleteUser() {
         User user = new User();
         user.id = 3;
         Disposable disposable = dao.delU(user).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(id -> {
-                    Log.d(TAG, "delete User: " + id);
-                }, throwable -> {
-                    Log.d(TAG, "Lesson 5: " + throwable);
-                });
+                .subscribe(id -> Log.d(TAG, "delete User: " + id), throwable -> Log.d(TAG, "Lesson 5: " + throwable));
     }
 
-    public void updateUser() {
-
+        public void updateUser() {
+            User user = new User();
+            user.id = 3;
+            Disposable disposable = dao.upU(user).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(id -> Log.d(TAG, "Update User: " + id), throwable -> Log.d(TAG, "Lesson 5: " + throwable));
     }
 
     public void getUsers() {
         Disposable disposable = dao.getAll().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(users -> {
-                    Log.d(TAG, "get all Users: " + users + " " + Thread.currentThread().getName());
-                }, throwable -> {
-                    Log.d(TAG, "Lesson 5: " + throwable);
-                });
+                .subscribe(users -> Log.d(TAG, "get all Users: " + users + " " + Thread.currentThread().getName()),
+                        throwable -> Log.d(TAG, "Lesson 5: " + throwable));
     }
 }
