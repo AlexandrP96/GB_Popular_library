@@ -11,4 +11,8 @@
     <string name="Single">Single</string>
     <string name="Retrofit">Retrofit</string>
     <string name="CheckLog">Check Log</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnGet">Get All</string>
 </resources>

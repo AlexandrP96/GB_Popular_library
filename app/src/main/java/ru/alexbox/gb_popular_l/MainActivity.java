@@ -2,36 +2,42 @@ package ru.alexbox.gb_popular_l;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
+import android.widget.TextView;
 
-import ru.alexbox.gb_popular_l.task_1.GsonActivity;
-import ru.alexbox.gb_popular_l.task_2.RetroActivity;
+import ru.alexbox.gb_popular_l.lesson_5.RoomPresenter;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RoomPresenter presenter;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Buttons();
+        textView = findViewById(R.id.textView);
+
+        presenter = new RoomPresenter();
     }
 
-    private void Buttons() {
-        Button task1 = findViewById(R.id.BtnOne);
-        Button task2 = findViewById(R.id.BtnTwo);
+    public void AppUser(View view) {
+        presenter.putUser();
+    }
 
+    public void DeleteUser(View view) {
+        presenter.deleteUser();
 
-        task1.setOnClickListener(v -> {
-            Intent first = new Intent(getApplicationContext(), GsonActivity.class);
-            startActivity(first);
-        });
+    }
 
-        task2.setOnClickListener(v -> {
-            Intent second = new Intent(getApplicationContext(), RetroActivity.class);
-            startActivity(second);
-        });
+    public void UpdateUser(View view) {
+        presenter.updateUser();
+
+    }
+
+    public void GetUsers(View view) {
+        presenter.getUsers();
     }
 }
