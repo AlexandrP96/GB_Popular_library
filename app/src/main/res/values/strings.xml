@@ -9,4 +9,6 @@
     <string name="btnSpam">Spam</string>
     <string name="btnAsynch">AsyncTask</string>
     <string name="Single">Single</string>
+    <string name="Retrofit">Retrofit</string>
+    <string name="CheckLog">Check Log</string>
 </resources>

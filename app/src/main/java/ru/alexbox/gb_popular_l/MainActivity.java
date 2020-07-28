@@ -6,11 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import ru.alexbox.gb_popular_l.task2.SecondActivity;
-import ru.alexbox.gb_popular_l.task1.FirstActivity;
+import ru.alexbox.gb_popular_l.task_1.GsonActivity;
+import ru.alexbox.gb_popular_l.task_2.RetroActivity;
 
 public class MainActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         task1.setOnClickListener(v -> {
-            Intent first = new Intent(getApplicationContext(), FirstActivity.class);
+            Intent first = new Intent(getApplicationContext(), GsonActivity.class);
             startActivity(first);
         });
 
         task2.setOnClickListener(v -> {
-            Intent second = new Intent(getApplicationContext(), SecondActivity.class);
+            Intent second = new Intent(getApplicationContext(), RetroActivity.class);
             startActivity(second);
         });
     }
