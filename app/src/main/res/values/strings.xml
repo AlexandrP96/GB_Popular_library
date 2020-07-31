@@ -15,4 +15,7 @@
     <string name="btnDelete">Delete</string>
     <string name="btnUpdate">Update</string>
     <string name="btnGet">Get All</string>
+    <string name="word_dagger">Dagger</string>
+    <string name="word_di">Di Activity</string>
+    <string name="word_nodi">No Di Activity</string>
 </resources>

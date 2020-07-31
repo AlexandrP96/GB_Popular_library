@@ -11,10 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".App"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".lesson_5.MainActivity">
+        <activity android:name=".lesson_6.dagger.DaggerActivity" />
+        <activity android:name=".lesson_6.di.DiActivity" />
+        <activity android:name=".lesson_6.nodi.NoDiActivity" />
+        <activity android:name=".lesson_6.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
