@@ -12,5 +12,9 @@ public class DiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_di);
+
+        DiGreen green = new DiGreen();
+        DiRed red = new DiRed(green);
+        DiWhite white = new DiWhite(green);
     }
 }

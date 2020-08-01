@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class NoDiWhite {
 
-    private static final String TAG = "White";
+    private static final String TAG = "NoDiActivity - ";
 
     public NoDiWhite() {
         NoDiGreen green = new NoDiGreen();
