@@ -9,7 +9,7 @@ public class NoDiWhite {
     public NoDiWhite() {
         NoDiGreen green = new NoDiGreen();
 
-        Log.i(TAG, "White: " + green.show());
+        Log.d(TAG, "White: " + green.show());
         Log.i(TAG, "White: " + green);
     }
 }
