@@ -6,8 +6,6 @@ import org.junit.Test;
 
 import ru.alexbox.gb_popular_l.lesson_6.unit.task_1;
 
-import static org.junit.Assert.assertEquals;
-
 public class FirstTaskTest {
 
     private task_1 task1;
@@ -17,17 +15,15 @@ public class FirstTaskTest {
         task1 = new task_1();
     }
 
-    // Положительный сценарий
     @Test
-    public void task1IsCorrect() {
-        int arg = task1.plusMethod();
-        assertEquals(arg, 100);
+    public void firstTaskPositive() {
+        int arg = task1.plusArgs(30, 70);
+        Assert.assertEquals(arg, 100);
     }
 
-    // Отрицательный сценарий
     @Test
-    public void task1IsWrong() {
-        int arg = task1.plusMethod();
+    public void firstTaskNegative() {
+        int arg = task1.plusArgs(30, 70);
         Assert.assertNotEquals(arg, 2);
     }
 }
