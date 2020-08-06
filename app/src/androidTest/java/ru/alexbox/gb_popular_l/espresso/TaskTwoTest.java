@@ -7,7 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import ru.alexbox.gb_popular_l.R;
-import ru.alexbox.gb_popular_l.lesson_7.MainActivity;
+import ru.alexbox.gb_popular_l.lesson_8.MainActivity;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;

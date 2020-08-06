@@ -1,4 +1,4 @@
-package ru.alexbox.gb_popular_l.lesson_7.unit;
+package ru.alexbox.gb_popular_l.lesson_8.unit;
 
 public class task_1 {
 

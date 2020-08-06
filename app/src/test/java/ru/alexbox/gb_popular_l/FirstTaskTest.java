@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import ru.alexbox.gb_popular_l.lesson_7.unit.task_1;
+import ru.alexbox.gb_popular_l.lesson_8.unit.task_1;
 
 public class FirstTaskTest {
 

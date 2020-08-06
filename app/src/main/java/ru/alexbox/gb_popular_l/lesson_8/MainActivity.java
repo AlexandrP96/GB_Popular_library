@@ -1,4 +1,4 @@
-package ru.alexbox.gb_popular_l.lesson_7;
+package ru.alexbox.gb_popular_l.lesson_8;
 
 import androidx.appcompat.app.AppCompatActivity;
 
