@@ -20,4 +20,6 @@
     <string name="word_nodi">No Di Activity</string>
     <string name="btnShow">Show</string>
     <string name="lesson_7">Espresso</string>
+    <string name="lesson_8">Lesson 8</string>
+    <string name="btnError">Error</string>
 </resources>

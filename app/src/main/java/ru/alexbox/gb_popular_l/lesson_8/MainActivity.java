@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.taskTwoView);
-        button = findViewById(R.id.btnTaskTwo);
+        textView = findViewById(R.id.mainView);
+        button = findViewById(R.id.btnError);
         textView.setVisibility(View.INVISIBLE);
 
         buttonLogic();
