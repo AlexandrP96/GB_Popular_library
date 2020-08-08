@@ -18,4 +18,6 @@
     <string name="word_dagger">Dagger</string>
     <string name="word_di">Di Activity</string>
     <string name="word_nodi">No Di Activity</string>
+    <string name="btnShow">Show</string>
+    <string name="lesson_7">Espresso</string>
 </resources>
